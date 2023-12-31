@@ -1,0 +1,121 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.welcome {
+  background: linear-gradient(tomato, royalBlue);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+}
+
+h1 {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  z-index: 1;
+
+}
+
+ul li {
+  background-color: #ffffff;
+  position: absolute;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  list-style-type: none;
+  animation: anime 10s linear infinite;
+}
+
+.square li {
+  top: 50%;
+  left: 45%;
+  animation-delay: 1s;
+}
+
+.square li:nth-child(2) {
+  top: 80%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.square li:nth-child(3) {
+  top: 80%;
+  left: 80%;
+  animation-delay: 4s;
+}
+
+.square li:nth-child(4) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 6s;
+}
+
+.square li:nth-child(5) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 8s;
+}
+
+@keyframes anime {
+  0% {
+    transform: scale(0) rotateY(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(4) rotateY(1000deg);
+    opacity: 0;
+  }
+}
+
+/* Cirlce */
+.circle li {
+  bottom: 0vh;
+  left: 15vw;
+  animation: circle 10s linear infinite;
+
+}
+
+.circle li:nth-child(2) {
+  left: 30vw;
+  animation-delay: 2s;
+}
+
+.circle li:nth-child(3) {
+  left: 50vw;
+  animation-delay: 4s;
+}
+
+.circle li:nth-child(4) {
+  left: 70vw;
+  animation-delay: 6s;
+}
+
+.circle li:nth-child(5) {
+  left: 90vw;
+  animation-delay: 8s;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    bottom: 0vh;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(4) rotate(1000deg);
+    bottom: 90vh;
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
